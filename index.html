@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Tic-Tac-Toe ☁️</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <section id="before-sign-in">
+        <h1>Tic-Tac-Toe ☁️</h1>
+        <!-- Sign up form goes here! -->
+        <form id="sign-up" class="border">
+          <!-- to group multiple inputs together in our form -->
+          <fieldset>
+            <legend>Sign Up</legend>
+            <label for="em">Email:</label>
+            <input type="email" name="credentials[email]" id="em" placeholder="Enter Email" required>
+            <label for="ps">Password:</label>
+            <input type="password" name="credentials[password]" id="ps" placeholder="Enter Password" required>
+            <label for="psc">Password Confirmation:</label>
+            <input type="password" name="credentials[password_confirmation]" id="psc" placeholder="Enter Password Confirmation" required>
+            <button class="btn btn-success">Sign-Up</button>
+          </fieldset>
+        </form>
+        <!-- Sign in -->
+         <form id="sign-in" class="border">
+          <fieldset>
+            <legend>Sign In</legend>
+            <label for="email">Email:</label>
+            <input type="email" name="credentials[email]" id="email" placeholder="Enter Email" required>
+            <label for="password">Password:</label>
+            <input type="password" name="credentials[password]" id="password" placeholder="Enter Password" required>
+            <button class="btn btn-primary">Sign-In</button>
+          </fieldset>
+        </form>
+
+      </section>
+        <!-- After sign in Page User should see this -->
+
+        <section id="after-sign-in">
+        <!-- change password and sign out forms  -->
+        <form id="change-password" class="border">
+          <fieldset>
+            <legend>Change Password</legend>
+            <label for="old">Old Password:</label>
+            <input type="password" name="passwords[old]" id="old" placeholder="Enter Old Password" required>
+            <label for="new">New Password:</label>
+            <input type="password" name="passwords[new]" id="new" placeholder="Enter New Password" required>
+            <button class="btn btn-primary">Change Password</button>
+          </fieldset>
+          </form>
+          <!-- tic tac toe -->
+           <div class="h1">
+              <h1>Tic-Tac-Toe</h1>
+              <div class="container">
+                  <div class="row">
+                      <div class="box" name="games[cells]" id="TL"></div>
+                      <div class="box" name="games[cells]" id="TM"></div>
+                      <div class="box" name="games[cells]" id="TR"></div>
+                  </div>
+                  <div class="row">
+                      <div class="box" name="games[cells]" id="ML"></div>
+                      <div class="box" name="games[cells]" id="MM"></div>
+                      <div class="box" name="games[cells]" id="MR"></div>
+                  </div>
+                  <div class="row">
+                      <div class="box" name="games[cells]" id="BL"></div>
+                      <div class="box" name="games[cells]" id="BM"></div>
+                      <div class="box" name="games[cells]" id="BR"></div>
+                  </div>
+              </div>
+              <div class="buttons">
+                  <button id="startGame" class="btn btn-primary">Play Game</button>
+                  <button id="resetBtn" class="btn btn-primary">Reset Game</button>
+              </div>
+              <div><h2 id="result"></h2></div>
+          </div>
+
+          <!-- Sign out -->
+        <form id="sign-out" class="border">
+          <fieldset>
+            <button class="btn btn-primary">Sign Out</button>
+          </fieldset>
+          </form>
+      </section>
+
+        <!-- create a section for your user feedback -->
+      <section>
+        <div id="error-message"></div>
+
+        <div id="movies-display"></div>
+      </section>
+
+    </body>
+</html>
